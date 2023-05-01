@@ -8,8 +8,8 @@ const Navbar = () => {
   const {theme, setTheme} = useContext(ThemeContext)
 
   return (
-    <div className="w-full bg-black text-white p-5 md:px-0 border-b-2 border-white">
-        <div className="max-w-screen-md flex justify-between items-center m-auto">
+    <div className="w-full bg-black text-white p-5 lg:px-0 border-b-2 border-white">
+        <div className="max-w-screen-lg flex justify-between items-center m-auto">
             <div>
                 <Link href="/">Home</Link>
             </div>
