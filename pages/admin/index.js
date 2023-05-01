@@ -101,7 +101,7 @@ const Index = () => {
         <div className="p-5 md:p-20 bg-gray-200 text-black">
             <h2 className="text-3xl pb-5 font-bold">Posts List</h2>
             {post.map((item,index)=>
-            <div className="flex justify-between bg-white p-4 rounded mb-2">
+            <div key={index} className="flex justify-between bg-white p-4 rounded mb-2">
                 <div>{item.name}</div>
                 <div className="flex items-center">
                     <span style={{backgroundColor:"grey", padding:"4px", fontSize:"12px", fontWeight:"bold", color:"white", textTransform:"uppercase"}}>{item.status}</span>
