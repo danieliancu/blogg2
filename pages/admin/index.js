@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import Layout from "../components/Layout"
 import Link from 'next/link'
-import Posts from './Posts'
-
 import {AiFillDelete} from 'react-icons/ai'
+
+
 
 
 const Index = () => {
@@ -17,6 +17,7 @@ const Index = () => {
     })
 
     const [post, setPost] = useState([])
+
 
     const handleChange = (e) =>{
         const { value, name } = e.target
@@ -39,11 +40,12 @@ const Index = () => {
     }
 
   return (
+
     <Layout>
         <div className="m-auto max-w-screen-md my-12">
             <div className="flex justify-between">
-                <h1 className="text-3xl pb-5 font-bold px-5 lg:px-0">Admin Area</h1>
-                <Link className="text-3xl pb-5 font-bold px-5 lg:px-0" href="/admin/Posts">Posts List</Link>
+                <h1 className="text-3xl pb-5 font-bold px-5 lg:px-0">New Post</h1>
+                <Link className="text-3xl pb-5 font-bold px-5 lg:px-0" href="#posts">Posts List</Link>
             </div>
             <form
                 className="text-black px-5 lg:px-0"
@@ -98,7 +100,7 @@ const Index = () => {
             </form>
         </div>
 
-        <div className="p-5 md:p-20 bg-gray-200 text-black">
+        <div id="posts" className="p-5 md:p-20 bg-gray-200 text-black">
             <h2 className="text-3xl pb-5 font-bold">Posts List</h2>
             {post.map((item,index)=>
             <div key={index} className="flex justify-between bg-white p-4 rounded mb-2">
@@ -107,15 +109,17 @@ const Index = () => {
                     <span style={{backgroundColor:"grey", padding:"4px", fontSize:"12px", fontWeight:"bold", color:"white", textTransform:"uppercase"}}>{item.status}</span>
                     <AiFillDelete
                         onClick={()=>handleDelete(item)}                    
-                        style={{color:"red", marginLeft:"5px", fontSize:"25px"}}
+                        style={{color:"red", marginLeft:"5px", fontSize:"25px", cursor:"pointer"}}
                     />
                 </div>
             </div>
             )}
-            
         </div>
+
     </Layout>
+
   )
 }
+
 
 export default Index
