@@ -7,8 +7,8 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
       <Layout>
-        <div className="max-w-screen-lg m-auto mt-20 px-5 lg:px-0">
-          HomePage
+        <div className="max-w-screen-lg m-auto mt-20 px-5 lg:px-0 h-screen">
+        <h1 className="text-center font-bold text-5xl">Hello</h1>
         </div>
       </Layout>
 
